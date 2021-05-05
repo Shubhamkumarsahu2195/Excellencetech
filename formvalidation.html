@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateform() {
+            let name = document.forms["myform"]["firstname"].value;
+            let checkvalue = document.forms["myform"]["checkme"].checked;
+            if (name == "") {
+                alert("name cannot be blank");
+                return false;
+
+            }
+            else if (checkvalue == false) {
+                alert("checkbox need to be checked");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="#" onsubmit="return validateform()">
+        <input type="text" name="firstname">
+        <input type="checkbox" name="checkme">
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

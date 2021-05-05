@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <p>Question 2</p>
+
+
+<script>
+    const findMaxConsecutiveOnes = (arr) => {
+        let currentCount = 0;
+        let maxCount = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (arr[i] === 0) {
+                currentCount = 0;
+            }
+            else {
+                currentCount++;
+            }
+            if (currentCount > maxCount) {
+                maxCount = currentCount;
+            }
+        }
+        return maxCount;
+    }
+    let array =[0,0,1,1,0,0,0,1,0,0,1,1,1,0];
+    let maxCountOfOne= findMaxConsecutiveOnes(array);
+    console.log('max no. of consecutive 1s is :'+ maxCountOfOne);
+</script>
+</body>
+</html>
